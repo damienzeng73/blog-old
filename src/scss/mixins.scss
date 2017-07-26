@@ -1,0 +1,61 @@
+@mixin center($position: 'both') {
+    display: flex;
+
+    @if $position == 'both' {
+        align-items: center;
+        justify-content: center;
+    }
+
+    @else if $position == 'vertical' {
+        align-items: center;
+    }
+
+    @else if $position == 'horizontal' {
+        justify-content: center;
+    }
+
+    @else if $position == 'none' {
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+}
+
+
+@mixin animation($val) {
+    -webkit-animation: $val;
+    animation: $val;
+}
+
+
+@mixin transform($val) {
+    -webkit-transform: $val;
+    -ms-transform: $val;
+    transform: $val;
+}
+
+@mixin transition($val) {
+    -webkit-transition: $val;
+    transition: $val;
+}
+
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+
+@mixin mq($width, $type: 'min') {
+    @if $type == 'max' {
+        $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+        @content;
+    }
+}

@@ -1,0 +1,36 @@
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+
+body * {
+    font-family: 'Courgette', cursive;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+#app {
+    height: 200vh;
+}
+
+#navbar {
+    position: fixed;
+    padding: 30px;
+    @include transition(padding 0.4s linear);
+
+    .header {
+        @include center(both);
+    }
+
+    .item {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
+
+@include mq(768px) {
+    .small-nav {
+        padding: 0 !important;
+    }
+}
