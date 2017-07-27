@@ -10,9 +10,15 @@ body * {
     font-family: 'Courgette', cursive;
 }
 
+
+/* Navbar */
 #navbar {
     position: fixed;
     @include transition(padding 0.4s linear);
+
+    @include mq(768px) {
+        padding: 30px;
+    }
 
     .header {
         @include center(both);
@@ -25,17 +31,58 @@ body * {
 }
 
 @include mq(768px) {
-    #navbar {
-        padding: 30px;
-    }
-
     .small-nav {
         padding: 0 !important;
     }
 }
+/**********/
 
+
+/* Content */
 main {
     position: relative;
     top: 200px;
     left: 0;
 }
+/***********/
+
+
+/* Footer */
+#footer {
+    position: fixed;
+    bottom: 0;
+    padding: 30px;
+    width: 100% !important;
+    text-align: center;
+
+    @include mq(768px) {
+        text-align: right;
+    }
+
+    button {
+        margin: 0 .75em 0 0 !important;
+        @include transition(all 0.3s ease);
+
+        &:hover {
+            background-color: #fff;
+            border: 2px solid;
+            transform: rotate(360deg) scale(1.2);
+        }
+
+        &:nth-child(1):hover {
+            color: #3b5998;
+            border-color: #3b5998;
+        }
+
+        &:nth-child(2):hover {
+            color: #1f88be;
+            border-color: #1f88be;
+        }
+
+        &:nth-child(3):hover {
+            color: #1b1c1d;
+            border-color: #1b1c1d;
+        }
+    }
+}
+/**********/

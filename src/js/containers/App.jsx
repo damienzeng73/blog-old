@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import HomePage from './HomePage'
 import BlogPage from './BlogPage'
 import ProjectsPage from './ProjectsPage'
+import Footer from '../components/Footer'
 
 const Main = () => {
     return (
@@ -24,6 +25,7 @@ class App extends React.Component {
             <div>
                 <Navbar />
                 <Main />
+                <Footer />
             </div>
         )
     }
