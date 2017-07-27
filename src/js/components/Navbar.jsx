@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { Menu } from 'semantic-ui-react'
 
@@ -15,6 +16,11 @@ class Navbar extends React.Component {
     }
 
     componentDidMount() {
+        let currentPath = this.context.router.history.location.pathname
+        if (currentPath !== '/') {
+            this.setState({ activeItem: currentPath.substring(1) })
+        }
+
         window.addEventListener('scroll', this.handleOnScroll)
     }
 
@@ -38,7 +44,7 @@ class Navbar extends React.Component {
     render() {
         return (
             <Menu id='navbar' className={this.state.addedClass} pointing secondary fluid stackable>
-                <Menu.Item as={Link} name='home' to='/' header>
+                <Menu.Item as={Link} name='home' to='/' header onClick={this.handleOnClick}>
                     <h1>Damien's site</h1>
                 </Menu.Item>
 
@@ -58,6 +64,10 @@ class Navbar extends React.Component {
             </Menu>
         )
     }
+}
+
+Navbar.contextTypes = {
+    router: PropTypes.object.isRequired
 }
 
 

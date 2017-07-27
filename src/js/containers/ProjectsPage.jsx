@@ -1,9 +1,12 @@
 import React from 'react'
+import { Container } from 'semantic-ui-react'
 
 class ProjectsPage extends React.Component {
     render() {
         return (
-            <h2>Projects page</h2>
+            <Container>
+                <h2>Projects page</h2>
+            </Container>
         )
     }
 }
