@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Menu } from 'semantic-ui-react'
 
 class Navbar extends React.Component {
@@ -37,20 +38,20 @@ class Navbar extends React.Component {
     render() {
         return (
             <Menu id='navbar' className={this.state.addedClass} pointing secondary fluid stackable>
-                <Menu.Item header>
+                <Menu.Item as={Link} name='home' to='/' header>
                     <h1>Damien's site</h1>
                 </Menu.Item>
 
                 <Menu.Menu position='right'>
-                    <Menu.Item name='home' active={this.state.activeItem === 'home'} onClick={this.handleOnClick}>
+                    <Menu.Item as={Link} name='home' to='/' active={this.state.activeItem === 'home'} onClick={this.handleOnClick}>
                         Home
                     </Menu.Item>
 
-                    <Menu.Item name='blog' active={this.state.activeItem === 'blog'} onClick={this.handleOnClick}>
+                    <Menu.Item as={Link} name='blog' to='/blog' active={this.state.activeItem === 'blog'} onClick={this.handleOnClick}>
                         Blog
                     </Menu.Item>
 
-                    <Menu.Item name='projects' active={this.state.activeItem === 'projects'} onClick={this.handleOnClick}>
+                    <Menu.Item as={Link} name='projects' to='/projects' active={this.state.activeItem === 'projects'} onClick={this.handleOnClick}>
                         Projects
                     </Menu.Item>
                 </Menu.Menu>
