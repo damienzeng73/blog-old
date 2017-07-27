@@ -1,11 +1,16 @@
 import React from 'react'
-import { Container } from 'semantic-ui-react'
+import { Container, Divider } from 'semantic-ui-react'
+
+import AboutMe from '../components/home/AboutMe'
+import ContactMe from '../components/home/ContactMe'
 
 class HomePage extends React.Component {
     render() {
         return (
             <Container>
-                <h2>Home page</h2>
+                <AboutMe />
+                <Divider />
+                <ContactMe />
             </Container>
         )
     }
