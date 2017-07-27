@@ -1,6 +1,7 @@
 @import 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Courgette');
 
+/* Global */
 html, body {
     padding: 0;
     margin: 0;
@@ -35,7 +36,6 @@ body * {
         padding: 0 !important;
     }
 }
-/**********/
 
 
 /* Content */
@@ -44,7 +44,6 @@ main {
     top: 200px;
     left: 0;
 }
-/***********/
 
 
 /* Footer */
@@ -85,4 +84,3 @@ main {
         }
     }
 }
-/**********/
