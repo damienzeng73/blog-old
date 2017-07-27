@@ -22,7 +22,7 @@ const Main = () => {
 class App extends React.Component {
     render() {
         return (
-            <div>
+            <div id='root'>
                 <Navbar />
                 <Main />
                 <Footer />

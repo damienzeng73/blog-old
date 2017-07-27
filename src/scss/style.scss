@@ -12,75 +12,85 @@ body * {
 }
 
 
-/* Navbar */
-#navbar {
-    position: fixed;
-    @include transition(padding 0.4s linear);
+#root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    /* Navbar */
+    #navbar {
+        background-color: #fff;
+        z-index: 999;
+        @include transition(padding 0.4s linear);
+
+        @include mq(768px) {
+            position: fixed;
+            padding: 30px;
+        }
+
+        .header {
+            @include center(both);
+        }
+
+        .item {
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+    }
 
     @include mq(768px) {
+        .small-nav {
+            padding: 0 !important;
+        }
+    }
+
+
+    /* Content */
+    main {
+        flex: 1;
+        margin-top: 15px;
+
+        @include mq(768px) {
+            margin-top: 170px;
+        }
+    }
+
+
+    /* Footer */
+    #footer {
         padding: 30px;
-    }
+        width: 100% !important;
+        text-align: center;
+        z-index: 999;
 
-    .header {
-        @include center(both);
-    }
-
-    .item {
-        padding-left: 3em;
-        padding-right: 3em;
-    }
-}
-
-@include mq(768px) {
-    .small-nav {
-        padding: 0 !important;
-    }
-}
-
-
-/* Content */
-main {
-    position: relative;
-    top: 200px;
-    left: 0;
-}
-
-
-/* Footer */
-#footer {
-    position: fixed;
-    bottom: 0;
-    padding: 30px;
-    width: 100% !important;
-    text-align: center;
-
-    @include mq(768px) {
-        text-align: right;
-    }
-
-    button {
-        margin: 0 .75em 0 0 !important;
-        @include transition(all 0.3s ease);
-
-        &:hover {
-            background-color: #fff;
-            border: 2px solid;
-            transform: rotate(360deg) scale(1.2);
+        @include mq(768px) {
+            text-align: right;
         }
 
-        &:nth-child(1):hover {
-            color: #3b5998;
-            border-color: #3b5998;
-        }
+        button {
+            margin: 0 .75em 0 0 !important;
+            @include transition(all 0.3s ease);
 
-        &:nth-child(2):hover {
-            color: #1f88be;
-            border-color: #1f88be;
-        }
+            &:hover {
+                background-color: #fff;
+                border: 2px solid;
+                transform: rotate(360deg) scale(1.2);
+            }
 
-        &:nth-child(3):hover {
-            color: #1b1c1d;
-            border-color: #1b1c1d;
+            &:nth-child(1):hover {
+                color: #3b5998;
+                border-color: #3b5998;
+            }
+
+            &:nth-child(2):hover {
+                color: #1f88be;
+                border-color: #1f88be;
+            }
+
+            &:nth-child(3):hover {
+                color: #1b1c1d;
+                border-color: #1b1c1d;
+            }
         }
     }
 }
