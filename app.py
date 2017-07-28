@@ -45,7 +45,7 @@ def sendEmail():
     email = request.json['email']
     message = request.json['message']
 
-    msg = Message('[Flask-mail] Sent from {}'.format(email), sender=email, recipients=['damnee562@gmail.com'])
+    msg = Message('[Flask-mail] Sent from {} by {}'.format(email, name), sender=email, recipients=['damnee562@gmail.com'])
     msg.body = message
     mail.send(msg)
 
