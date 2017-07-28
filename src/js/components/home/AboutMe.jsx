@@ -3,7 +3,7 @@ import { Segment } from 'semantic-ui-react'
 
 const AboutMe = () => {
     return (
-        <Segment id='aboutMe'>
+        <Segment id='about-me'>
             <p>
                 My name is Damien Zeng, I'm a full-stack web developer, familiar with JavaScript, Python programming language.
             </p>
