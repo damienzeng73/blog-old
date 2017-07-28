@@ -9,7 +9,7 @@ class HomePage extends React.Component {
         return (
             <Container>
                 <AboutMe />
-                <Divider />
+                <Divider section />
                 <ContactMe />
             </Container>
         )

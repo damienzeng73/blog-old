@@ -1,5 +1,5 @@
 @import 'mixins';
-@import url('https://fonts.googleapis.com/css?family=Courgette');
+@import url('https://fonts.googleapis.com/css?family=Courgette|Raleway');
 
 /* Global */
 html, body {
@@ -52,6 +52,17 @@ body * {
 
         @include mq(768px) {
             margin-top: 170px;
+        }
+
+        #aboutMe {
+
+            p {
+
+                &:first-letter {
+                    font-size: 2em;
+                    font-weight: bold;
+                }
+            }
         }
     }
 
