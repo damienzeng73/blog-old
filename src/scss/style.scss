@@ -54,13 +54,21 @@ body * {
             margin-top: 170px;
         }
 
-        #aboutMe {
+        #home-page {
+            #about-me {
+                p {
+                    &:first-letter {
+                        font-size: 2em;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
 
-            p {
-
-                &:first-letter {
-                    font-size: 2em;
-                    font-weight: bold;
+        #projects-page {
+            .card {
+                a, button {
+                    width: 100%;
                 }
             }
         }
