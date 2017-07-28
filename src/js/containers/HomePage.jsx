@@ -30,7 +30,7 @@ class HomePage extends React.Component {
 
     handleOnSubmit(e) {
         e.preventDefault()
-        this.setState({ isSending: true })
+        this.setState({ isSending: true, successMessageVisible: false, errorMessageVisible: false })
         this.props.sendEmail(this.state)
             .then((res) => {
                 this.setState({ name: '', email: '', message: '', isSending: false, successMessageVisible: true })
