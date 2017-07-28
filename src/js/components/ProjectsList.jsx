@@ -38,7 +38,7 @@ const ProjectsList = (props) => {
     })
 
     return (
-        <Card.Group itemsPerRow={3}>
+        <Card.Group itemsPerRow={3} stackable>
             {projectsCollection}
         </Card.Group>
     )
