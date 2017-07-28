@@ -4,16 +4,8 @@ import { Form, Button, Icon } from 'semantic-ui-react'
 const ContactMe = () => {
     return (
         <Form>
-            <Form.Field>
-                <label>Your name</label>
-                <input placeholder='Your name' />
-            </Form.Field>
-
-            <Form.Field>
-                <label>Email address</label>
-                <input placeholder='Email address' />
-            </Form.Field>
-
+            <Form.Input label='Your name' placeholder='Your name' />
+            <Form.Input label='Email address' placeholder='Email address' />
             <Form.TextArea label='Messages' />
 
             <Button type='submit' primary>
