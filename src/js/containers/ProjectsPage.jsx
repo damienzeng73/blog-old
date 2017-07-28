@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Container } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 
-import ProjectsList from '../components/ProjectsList'
+import ProjectsList from '../components/projects/ProjectsList'
 import { fetchProjects } from '../actions/Projects'
 
 class ProjectsPage extends React.Component {
