@@ -8,8 +8,12 @@ class HomePage extends React.Component {
     render() {
         return (
             <Container>
+                <h2>About me</h2>
                 <AboutMe />
+
                 <Divider section />
+
+                <h2>Contact me</h2>
                 <ContactMe />
             </Container>
         )
