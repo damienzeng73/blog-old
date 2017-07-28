@@ -11,7 +11,7 @@ const ContactMe = (props) => {
 
             <Button type='submit' primary loading={props.isSending}>
                 <Icon name='mail outline' />
-                Send email
+                Send message
             </Button>
         </Form>
     )
