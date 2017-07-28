@@ -7,7 +7,7 @@ import ContactMe from '../components/home/ContactMe'
 class HomePage extends React.Component {
     render() {
         return (
-            <Container>
+            <Container id='home-page'>
                 <h2>About me</h2>
                 <AboutMe />
 

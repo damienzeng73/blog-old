@@ -4,7 +4,7 @@ import { Container } from 'semantic-ui-react'
 class BlogPage extends React.Component {
     render() {
         return (
-            <Container>
+            <Container id='blog-page'>
                 <h2>Blog page</h2>
             </Container>
         )
