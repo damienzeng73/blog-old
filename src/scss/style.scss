@@ -67,6 +67,14 @@ body * {
 
         #projects-page {
             .card {
+                .label {
+                    font-weight: normal !important;
+
+                    @include mq(768px) {
+                        font-size: .78571429rem;
+                    }
+                }
+
                 a, button {
                     width: 100%;
                 }

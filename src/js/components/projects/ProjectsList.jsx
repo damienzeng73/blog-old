@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Card, Button } from 'semantic-ui-react'
+import { Card, Label, Button } from 'semantic-ui-react'
 
 const ProjectsList = (props) => {
     let projectsCollection = _.map(props.projects, (project, idx) => {
         let tagsCollection = _.map(project.tags, (tag, idx) => {
             return (
-                <span key={idx}>{tag}</span>
+                <Label key={idx} size='tiny'>{tag}</Label>
             )
         })
 
