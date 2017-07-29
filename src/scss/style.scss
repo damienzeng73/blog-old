@@ -65,6 +65,24 @@ body * {
             }
         }
 
+        #blog-page {
+            .item {
+                .header {
+                    width: 100%;
+                }
+
+                .extra {
+                    text-align: right;
+                }
+
+                @include mq(768px) {
+                    .label {
+                        font-size: .78571429rem;
+                    }
+                }
+            }
+        }
+
         #projects-page {
             .card {
                 .label {

@@ -51,6 +51,20 @@ def sendEmail():
 
     return ('', 204)
 
+@app.route('/api/posts', methods=['GET'])
+def getPosts():
+    posts = []
+    for post in mongo.db.posts.find():
+        posts.append({
+            'title': post['title'],
+            'tags': post['tags'],
+            'content': post['content']
+        })
+
+    response = {}
+    response['posts'] = posts[::-1]
+    return jsonify(response)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
