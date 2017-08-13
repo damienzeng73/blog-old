@@ -67,6 +67,10 @@ body * {
 
         #blog-page {
             .item {
+                * {
+                    font-family: Lato, 'Helvetica Neue',Arial,Helvetica,sans-serif;
+                }
+
                 .header {
                     width: 100%;
                 }
@@ -74,6 +78,42 @@ body * {
                 .extra {
                     text-align: right;
                 }
+
+                .label {
+                    font-weight: normal;
+                }
+
+                @include mq(768px) {
+                    .label {
+                        font-size: .78571429rem;
+                    }
+                }
+            }
+
+            .post {
+                * {
+                    font-family: Lato, 'Helvetica Neue',Arial,Helvetica,sans-serif;
+                }
+
+                .meta {
+                    margin: .5em 0 .5em;
+                    font-size: 1em;
+                    line-height: 1em;
+                    color: rgba(0, 0, 0, .6);
+                }
+
+                .description {
+                    margin-top: .6em;
+                    max-width: auto;
+                    font-size: 1em;
+                    line-height: 1.4285em;
+                    color: rgba(0, 0, 0, .87);
+                }
+
+                .label {
+                    font-weight: normal;
+                }
+
 
                 @include mq(768px) {
                     .label {

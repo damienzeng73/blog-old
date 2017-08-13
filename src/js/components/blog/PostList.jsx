@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Item, Label } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 const BlogList = (props) => {
     let postsCollection = _.map(props.posts, (post, idx) => {
@@ -23,7 +24,9 @@ const BlogList = (props) => {
 
                     <Item.Description dangerouslySetInnerHTML={{__html: post.content}}>
                     </Item.Description>
-                    <Item.Extra><a href='#'>Read more</a></Item.Extra>
+                    <Item.Extra>
+                        <Link to={`/blog/${post._id}`}>Read more</Link>
+                    </Item.Extra>
                 </Item.Content>
             </Item>
         )
