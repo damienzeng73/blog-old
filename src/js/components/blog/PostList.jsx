@@ -24,6 +24,7 @@ const BlogList = (props) => {
 
                     <Item.Description dangerouslySetInnerHTML={{__html: post.content}}>
                     </Item.Description>
+                    <p>...</p>
                     <Item.Extra>
                         <Link to={`/blog/${post._id}`}>Read more</Link>
                     </Item.Extra>

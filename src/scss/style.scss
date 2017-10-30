@@ -83,6 +83,11 @@ body * {
                     font-weight: normal;
                 }
 
+                .description {
+                    height: 18px;
+                    overflow: hidden;
+                }
+
                 @include mq(768px) {
                     .label {
                         font-size: .78571429rem;
